@@ -1,3 +1,20 @@
 <h1>Create a ToDoodle</h1>
 
-<button>Create</button>
+<div class="input_fields_wrap">
+    <button class="addFieldButton">Add More Fields</button>
+    <div><input type="text" name="mytext[]"></div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        var addButton = $(".addFieldButton");
+
+        $(addButton).click(function(e){
+            e.preventDefault();
+            $(".input_fields_wrap").append('<div><input type="text" name="mytext[]"></div>');
+
+        });
+
+    })
+
+</script>
